@@ -1,14 +1,22 @@
-#include<stdio.h>
-#include<unistd.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 1 (Success)
- */
-int main(void)
-{
-        write(2"
-	"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
-        return (1);
+int main(void) {
+    int fd = open("error.txt", O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+    if (fd == -1) {
+        return 1;
+    }
+
+    const char* message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+    ssize_t len = sizeof(message) - 1;
+    ssize_t bytes_written = write(fd, message, len);
+    close(fd);
+
+    if (bytes_written != len) {
+        return 1;
+    }
+
+    return 0;
 }	
