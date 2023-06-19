@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main(void)
+{
     printf("Your program is a masterpiece,\n");
     printf("A work of art beyond compare.\n");
     printf("With each line you create,\n");
@@ -15,6 +16,6 @@ int main() {
     printf("Adds to the masterpiece's ode.\n");
     printf("Compile and run, behold your creation,\n");
     printf("A testament to your dedication.\n");
-    
+
     return 0;
 }
