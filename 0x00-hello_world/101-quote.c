@@ -10,5 +10,4 @@ int main(void)
 {
     write(2, MESSAGE, sizeof(MESSAGE) - 1);
     return (1);
-}
-	
+}	
