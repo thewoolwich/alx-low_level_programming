@@ -7,7 +7,7 @@
  * Description: This function determines the sign of a given number and prints
  *              the corresponding sign character.
  *
- * Return: 1 if the number is positive, -1 if it is negative, or 0 for anything else.
+ * Return: 1 if the number is positive, -1 if negative, or 0 for anything else.
  */
 int print_sign(int n)
 {
