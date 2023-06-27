@@ -4,17 +4,12 @@ void reset_to_98(int *n);
 
 int main(void)
 {
-    int n = 0;
-    printf("Before reset: n = %d\n", n);
+int n = 0;
+printf("Before reset: n = %d\n", n);
 
-    reset_to_98(&n);
+reset_to_98(&n);
 
-    printf("After reset: n = %d\n", n);
+printf("After reset: n = %d\n", n);
 
-    return 0;
-}
-
-void reset_to_98(int *n)
-{
-    *n = 98;
+return 0;
 }	
